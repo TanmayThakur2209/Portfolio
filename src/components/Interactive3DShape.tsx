@@ -81,7 +81,7 @@ export default function Interactive3DShape() {
     }
   };
 
-  const handleMouseUp = (e: MouseEvent) => {
+  const handleMouseUp = () => {
       isDraggingRef.current = false;
     
     if (hoveredSkill) {

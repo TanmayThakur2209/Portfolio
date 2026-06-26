@@ -352,7 +352,7 @@ export default function SpaceBackground() {
               let z1 = v.x * Math.sin(obj.rotY) + v.z * Math.cos(obj.rotY);
               
               let y2 = v.y * Math.cos(obj.rotX) - z1 * Math.sin(obj.rotX);
-              let z2 = v.y * Math.sin(obj.rotX) + z1 * Math.cos(obj.rotX);
+              // let z2 = v.y * Math.sin(obj.rotX) + z1 * Math.cos(obj.rotX);
 
               return {
                 x: x1 * scale + x2d,
