@@ -30,6 +30,8 @@ export interface TerminalLog {
   text: string;
   type: "system" | "input" | "success" | "warning" | "data";
   timestamp: string;
+  link?: string;
+  linkLabel?: string;
 }
 
 export interface Star3D {

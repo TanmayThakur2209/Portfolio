@@ -86,7 +86,7 @@ export default function InteractiveTerminal() {
             timestamp: time
           },
           {
-            text: "decrypt  - Perform real-time cryptographic visual cipher validation.",
+            text: "resume  - Decrypt and launch operator resume archive.",
             type: "data",
             timestamp: time
           },
@@ -180,7 +180,7 @@ export default function InteractiveTerminal() {
         ];
         break;
 
-      case "decrypt":
+      case "resume":
         if (isDecrypting) {
           responseLogs = [{ text: "CRITICAL: Decryption process already in execution state.", type: "warning", timestamp: time }];
         } else {
@@ -274,6 +274,13 @@ export default function InteractiveTerminal() {
               text: "OPERATOR COORDINATES CONFIRMED. SYSTEM FULLY UNLOCKED.",
               type: "data",
               timestamp: time
+            },
+            {
+              text: "RESUME DECRYPTED.",
+              type: "success",
+              timestamp: time,
+              link: "/Tanmay_Thakur_CV.pdf",
+              linkLabel: "Click here to open resume"
             }
           ]);
           return 100;
@@ -480,7 +487,23 @@ export default function InteractiveTerminal() {
                           : "text-neutral-350"
                 }`}
               >
-                {log.text}
+                <span>
+                  {log.text}
+
+                  {log.link && (
+                    <>
+                      {" "}
+                      <a
+                        href={log.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-white hover:text-neutral-300 transition-colors"
+                      >
+                        {log.linkLabel}
+                      </a>
+                    </>
+                  )}
+                </span>
               </span>
             </div>
           ))}

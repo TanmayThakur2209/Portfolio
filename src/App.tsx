@@ -6,7 +6,7 @@ import ProjectCosmos from "./components/ProjectCosmos";
 import InteractiveTerminal from "./components/InteractiveTerminal";
 import ContactForm from "./components/ContactForm";
 import {ArrowDown, ChevronRight, Clock} from "lucide-react";
-import { FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaPhoneAlt, FaFileAlt } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 // import { SiLeetcode, SiCodeforces  } from "react-icons/si";
 export default function App() {
@@ -284,6 +284,10 @@ export default function App() {
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-neutral-400" />
                 <a href="https://github.com/TanmayThakur2209" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><span className="flex gap-1"><FaGithub className="mt-0.5"/>TanmayThakur2209</span></a>
+              </li> 
+              <li className="flex items-center gap-1.5">
+                <ChevronRight className="w-3 h-3 text-neutral-400" />
+                <a href="Tanmay_Thakur_CV.pdf" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><span className="flex gap-1"><FaFileAlt  className="mt-0.5"/>Resume</span></a>
               </li> 
             
             </ul>
